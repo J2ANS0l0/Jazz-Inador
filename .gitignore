@@ -1,0 +1,15 @@
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/graph.json
+.obsidian/plugins/
+.obsidian/themes/
+.trash/
+.obsidian/
+
+# uv
+.venv/
+__pycache__/
+*.py[cod]
+.python-version

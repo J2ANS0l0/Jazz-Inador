@@ -8,7 +8,7 @@ from pathlib import Path
 import soundfile
 from PIL import Image
 
-project_dir = Path(__file__).parent
+project_dir = Path(__file__).parent.parent
 data_dir = project_dir / "Data"
 wav_dir = data_dir / "genres_original"
 png_dir = data_dir / "mel-spectrograms"

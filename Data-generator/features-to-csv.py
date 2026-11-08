@@ -4,7 +4,7 @@ from pathlib import Path
 import librosa
 import numpy as np
 
-project_dir = Path(__file__).parent
+project_dir = Path(__file__).parent.parent
 input_dir = project_dir / "Data/genres_original"
 csv_path = project_dir / "Data/features_3_sec.csv"
 segment_seconds = 3
