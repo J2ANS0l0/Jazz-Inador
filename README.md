@@ -46,11 +46,9 @@ uv run convolutional_neural_network/convolutional_neural_network_genres.py
 
 ```bash
 # Classify an audio file with the random forest:
-uv run random_forest/random_forest_genres_classifier.py
-<audio_file>
+uv run random_forest/random_forest_genres_classifier.py <audio_file>
 # Classify an audio file with the convolutional neural network:
-uv run convolutional_neural_network/convolutional_neural_network_genres_classifier.py
-<audio_file>
+uv run convolutional_neural_network/convolutional_neural_network_genres_classifier.py <audio_file>
 ```
 
 ### Bibliography
