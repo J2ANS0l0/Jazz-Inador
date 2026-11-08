@@ -6,6 +6,13 @@ dependencies = [
     "librosa>=1.0.0",
     "matplotlib>=3.11.2",
     "numpy>=2.5.4",
+    "pandas>=3.1.1",
     "pillow>=13.0.0",
+    "scikit-learn>=1.9.1",
     "soundfile>=0.14.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
 ]
