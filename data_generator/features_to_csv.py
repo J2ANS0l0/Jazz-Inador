@@ -5,8 +5,8 @@ import librosa
 import numpy as np
 
 project_dir = Path(__file__).parent.parent
-input_dir = project_dir / "Data/genres_original"
-csv_path = project_dir / "Data/features_3_sec.csv"
+input_dir = project_dir / "data/genres_original"
+csv_path = project_dir / "data/features_3_sec.csv"
 segment_seconds = 3
 segment_count = 10
 mfcc_count = 20
@@ -94,7 +94,7 @@ with open(csv_path, "w", newline="") as csv_file:
         for fragment in range(segment_count):
             segment = y[fragment * segment_length:(fragment + 1) * segment_length]
             row = extract_features(segment, sr)
-            row["filename"] = f"{genre}{numeric_id}{fragment:03d}.wav"
+            row["filename"] = f"{genre}{numeric_id}{fragment:03d}"
             row["label"] = genre
             writer.writerow(row)
             csv_file.flush()

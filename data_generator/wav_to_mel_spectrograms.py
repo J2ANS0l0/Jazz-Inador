@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 project_dir = Path(__file__).parent.parent
-input_dir = project_dir / "Data/genres_original"
-output_dir = project_dir / "Data/mel-spectrograms"
+input_dir = project_dir / "data/genres_original"
+output_dir = project_dir / "data/mel_spectrograms"
 segment_seconds = 3
 segment_count = 10
 

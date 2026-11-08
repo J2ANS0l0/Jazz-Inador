@@ -12,8 +12,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, precision_recall_fscore_support
 from sklearn.model_selection import GridSearchCV, StratifiedGroupKFold
 
-DATA_PATH = "Data/features_3_sec.csv"
-MODEL_PATH = "Models/random_forest.json"
+DATA_PATH = "data/features_3_sec.csv"
+MODEL_PATH = "models/random_forest.json"
 RANDOM_STATE = 42
 HOLDOUT_FRACTION = 0.2
 CV_FOLDS = 5

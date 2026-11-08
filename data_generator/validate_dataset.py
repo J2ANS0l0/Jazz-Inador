@@ -9,9 +9,9 @@ import soundfile
 from PIL import Image
 
 project_dir = Path(__file__).parent.parent
-data_dir = project_dir / "Data"
+data_dir = project_dir / "data"
 wav_dir = data_dir / "genres_original"
-png_dir = data_dir / "mel-spectrograms"
+png_dir = data_dir / "mel_spectrograms"
 csv_path = data_dir / "features_3_sec.csv"
 
 genres = ["blues", "classical", "country", "disco", "hiphop", "jazz", "metal", "pop", "reggae", "rock"]
@@ -46,14 +46,13 @@ columns = [
     "perceptr_var",
     "tempo",
 ]
-
 for index in range(1, mfcc_count + 1):
     columns.extend([f"mfcc{index}_mean", f"mfcc{index}_var"])
 columns.append("label")
 
 wav_pattern = re.compile(r"^([a-z]+)\.(\d{5})\.wav$")
 png_pattern = re.compile(r"^([a-z]+)(\d{5})(\d{3})\.png$")
-csv_name_pattern = re.compile(r"^([a-z]+)(\d{5})(\d{3})\.wav$")
+csv_name_pattern = re.compile(r"^([a-z]+)(\d{5})(\d{3})$")
 
 expected_audios = {
     f"{genre}{number:05d}": genre
@@ -155,7 +154,6 @@ def validate_csv():
         return [f"File not found: {csv_path}"]
 
     found = Counter()
-    rows_checked = 0
 
     with open(csv_path, newline="") as csv_file:
         reader = csv.reader(csv_file)
@@ -166,7 +164,6 @@ def validate_csv():
             errors.append(f"Header mismatch. Missing columns: {missing_columns}. Extra columns: {extra_columns}")
 
         for line_number, row in enumerate(reader, start=2):
-            rows_checked += 1
             if len(row) != len(columns):
                 errors.append(f"Line {line_number}: expected {len(columns)} fields, found {len(row)}")
                 continue
@@ -179,8 +176,7 @@ def validate_csv():
             if not match:
                 errors.append(f"Line {line_number}: invalid filename '{filename}'")
             else:
-                key = filename[:-4]
-                if key not in expected_fragments:
+                if filename not in expected_fragments:
                     errors.append(f"Line {line_number}: unexpected record '{filename}'")
                 if match.group(1) != record["label"]:
                     errors.append(f"Line {line_number}: label '{record['label']}' does not match '{filename}'")
@@ -206,10 +202,9 @@ def validate_csv():
         if count > 1:
             errors.append(f"Duplicated record: {filename} x{count}")
 
-    found_keys = {name[:-4] for name in found}
-    for key, genre in expected_fragments.items():
-        if key not in found_keys:
-            errors.append(f"Missing record: {key}.wav")
+    for key in expected_fragments:
+        if key not in found:
+            errors.append(f"Missing record: {key}")
 
     return errors
 
