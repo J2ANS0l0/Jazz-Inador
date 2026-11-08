@@ -1,3 +1,4 @@
+import argparse
 import json
 from functools import lru_cache
 from pathlib import Path
@@ -35,7 +36,12 @@ IMAGE_HEIGHT = 288
 
 
 def main():
-    audio = r"PATH"
+    parser = argparse.ArgumentParser(description="Classify the genre of an audio file with the convolutional neural network.")
+    parser.add_argument("audio", type=Path, help="Path to the audio file")
+    args = parser.parse_args()
+    if not args.audio.is_file():
+        parser.error(f"audio file not found: {args.audio}")
+    audio = args.audio
     spectrograms = audio_to_spectrograms(audio)
     result = convolutional_neural_network_genre_classifier(spectrograms)
     print(f"Segments: {len(spectrograms)}")

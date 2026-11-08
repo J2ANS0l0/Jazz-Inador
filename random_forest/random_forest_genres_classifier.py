@@ -1,3 +1,4 @@
+import argparse
 import json
 from functools import lru_cache
 from pathlib import Path
@@ -37,7 +38,12 @@ COLUMNS.append("label")
 
 
 def main():
-    audio = r"PATH"
+    parser = argparse.ArgumentParser(description="Classify the genre of an audio file with the random forest.")
+    parser.add_argument("audio", type=Path, help="Path to the audio file")
+    args = parser.parse_args()
+    if not args.audio.is_file():
+        parser.error(f"audio file not found: {args.audio}")
+    audio = args.audio
     features = extract_features(audio)
     result = random_forest_genre_classifier(features)
     print(f"Segments: {len(features['filename'])}")
