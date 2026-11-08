@@ -1,46 +1,56 @@
-### Jazz-Inador
+# Jazz-Inador
 
- Proyecto final de data science. Proyecto para filtrar musica en tiempo real dentro de una cola de reproduccion compartida, filtrando el genero de la musica recomendada por un sistema de Neural Network o Random Forest. Si la musica recomendada no es de el genero seleccionado (JAZZ) esta no se reproduce, siendo ignorada en la cola de reproduccion.
+Final data science project. It filters music in real time within a shared playback queue, classifying the genre of recommended songs with a Neural Network or Random Forest model. If a recommended song is not of the selected genre (JAZZ), it is not played and is skipped in the playback queue.
 
 ### Data: 
 
-| Genres    | Samples | Espectrograms | Features |
-| --------- | ------- | ------------- | -------- |
-| blues     | 100     | 1000          | 1000     |
-| classical | 100     | 1000          | 1000     |
-| country   | 100     | 1000          | 1000     |
-| disco     | 100     | 1000          | 1000     |
-| hiphop    | 100     | 1000          | 1000     |
-| jazz      | 99      | 999           | 999      |
-| metal     | 100     | 1000          | 1000     |
-| pop       | 100     | 1000          | 1000     |
-| reggae    | 100     | 1000          | 1000     |
-| rock      | 100     | 1000          | 1000     |
-| **Total** | **999** | **9999**      | **9999** |
+| Genres    | Samples | Spectrograms | Features |
+| --------- | ------- | ------------ | -------- |
+| blues     | 100     | 1000         | 1000     |
+| classical | 100     | 1000         | 1000     |
+| country   | 100     | 1000         | 1000     |
+| disco     | 100     | 1000         | 1000     |
+| hiphop    | 100     | 1000         | 1000     |
+| jazz      | 99      | 999          | 999      |
+| metal     | 100     | 1000         | 1000     |
+| pop       | 100     | 1000         | 1000     |
+| reggae    | 100     | 1000         | 1000     |
+| rock      | 100     | 1000         | 1000     |
+| **Total** | **999** | **9999**     | **9999** |
 ### Commands:
 
-`Instalar Dependencias:`
+####  Install dependencies:
 
-```python
+```bash
 uv sync
 ```
-
-`Generar Espectrogramas:`
+#### Generate data
 
 ```bash
-uv run Data-generator/wav-to-mel-spectrograms.py
+# Generate spectrograms:
+uv run data_generator/wav_to_mel_spectrograms.py
+# Generate features CSV:
+uv run data_generator/features_to_csv.py
+# Validate data:
+uv run data_generator/validate_dataset.py
+```
+#### Train models
+```bash
+# Train random forest
+uv run random_forest/random_forest_genres.py
+# Train convolutional neural network
+uv run convolutional_neural_network/convolutional_neural_network_genres.py
 ```
 
-`Generar CSV de Features:`
+#### Classify audio files using each model
 
 ```bash
-uv run Data-generator/features-to-csv.py
-```
-
-`Validar Data:`
-
-```bash
-uv run Data-generator/validate_dataset.py
+# Classify an audio file with the random forest:
+uv run random_forest/random_forest_genres_classifier.py
+<audio_file>
+# Classify an audio file with the convolutional neural network:
+uv run convolutional_neural_network/convolutional_neural_network_genres_classifier.py
+<audio_file>
 ```
 
 ### Bibliography
