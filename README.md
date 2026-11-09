@@ -11,12 +11,12 @@ Final data science project. It filters music in real time within a shared playba
 | country   | 100     | 1000         | 1000     |
 | disco     | 100     | 1000         | 1000     |
 | hiphop    | 100     | 1000         | 1000     |
-| jazz      | 99      | 999          | 999      |
+| jazz      | 99      | 990          | 990      |
 | metal     | 100     | 1000         | 1000     |
 | pop       | 100     | 1000         | 1000     |
 | reggae    | 100     | 1000         | 1000     |
 | rock      | 100     | 1000         | 1000     |
-| **Total** | **999** | **9999**     | **9999** |
+| **Total** | **999** | **9990**     | **9990** |
 ### Commands:
 
 ####  Install dependencies:
