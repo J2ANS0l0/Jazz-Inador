@@ -13,3 +13,9 @@
 __pycache__/
 *.py[cod]
 .python-version
+
+# Dataset
+/data/
+/Data.zip
+/Take5.mpeg
+data/

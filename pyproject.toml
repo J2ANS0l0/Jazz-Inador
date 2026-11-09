@@ -10,7 +10,17 @@ dependencies = [
     "pillow>=13.0.0",
     "scikit-learn>=1.9.1",
     "soundfile>=0.14.0",
+    "torch>=2.14.1",
 ]
+
+# CUDA 13.0 build of PyTorch (GPU training for the convolutional neural network).
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu130" }]
 
 [dependency-groups]
 dev = [

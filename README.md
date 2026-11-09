@@ -38,8 +38,10 @@ uv run data_generator/validate_dataset.py
 ```bash
 # Train random forest
 uv run random_forest/random_forest_genres.py
-# Train convolutional neural network
+# Train convolutional neural network (NumPy, CPU)
 uv run convolutional_neural_network/convolutional_neural_network_genres.py
+# Train convolutional neural network (PyTorch, NVIDIA GPU with CUDA 13)
+uv run convolutional_neural_network/convolutional_neural_network_genres_torch.py
 ```
 
 #### Classify audio files using each model
@@ -49,6 +51,8 @@ uv run convolutional_neural_network/convolutional_neural_network_genres.py
 uv run random_forest/random_forest_genres_classifier.py <audio_file>
 # Classify an audio file with the convolutional neural network:
 uv run convolutional_neural_network/convolutional_neural_network_genres_classifier.py <audio_file>
+# Classify an audio file with the PyTorch-trained network:
+uv run convolutional_neural_network/convolutional_neural_network_genres_classifier.py <audio_file> --model models/convolutional_neural_network_torch.json
 ```
 
 ### Bibliography

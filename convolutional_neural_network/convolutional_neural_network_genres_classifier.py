@@ -38,12 +38,13 @@ IMAGE_HEIGHT = 288
 def main():
     parser = argparse.ArgumentParser(description="Classify the genre of an audio file with the convolutional neural network.")
     parser.add_argument("audio", type=Path, help="Path to the audio file")
+    parser.add_argument("--model", type=Path, default=None, help=f"Model JSON (default: {MODEL_RELATIVE_PATH})")
     args = parser.parse_args()
     if not args.audio.is_file():
         parser.error(f"audio file not found: {args.audio}")
     audio = args.audio
     spectrograms = audio_to_spectrograms(audio)
-    result = convolutional_neural_network_genre_classifier(spectrograms)
+    result = convolutional_neural_network_genre_classifier(spectrograms, args.model)
     print(f"Segments: {len(spectrograms)}")
     for genre, probability in result.items():
         print(f"{genre}: {probability:.4f}")
