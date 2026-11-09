@@ -54,8 +54,6 @@ uv run --group gpu cnn/cnn_genres_torch.py
 uv run random_forest/random_forest_genres_classifier.py <audio_file>
 # Classify an audio file with the CNN (models/cnn.json):
 uv run cnn/cnn_genres_classifier.py <audio_file>
-# Classify an audio file with the NumPy-trained CNN:
-uv run cnn/cnn_genres_classifier.py <audio_file> --model models/cnn_numpy.json
 ```
 
 ### Bibliography
