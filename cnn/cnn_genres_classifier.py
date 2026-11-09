@@ -75,8 +75,9 @@ def _render_spectrogram(segment, sr):
     return np.asarray(canvas.buffer_rgba())[..., :3].copy()
 
 
-def audio_to_spectrograms(audio_path):
-    y, sr = librosa.load(Path(audio_path), sr=SAMPLE_RATE, mono=True)
+def audio_to_spectrograms(audio_path, max_seconds=None):
+    # max_seconds: only analyze the start of the audio (None = the whole file).
+    y, sr = librosa.load(Path(audio_path), sr=SAMPLE_RATE, mono=True, duration=max_seconds)
     segment_length = SEGMENT_SECONDS * sr
     segment_count = max(1, len(y) // segment_length)
     y = librosa.util.fix_length(y, size=segment_count * segment_length)

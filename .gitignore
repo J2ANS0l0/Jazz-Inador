@@ -18,4 +18,10 @@ __pycache__/
 /data/
 /Data.zip
 /Take5.mpeg
+
+# Playlist filter: login session (never commit), downloaded audio, local state
+playlist_filter/browser.json
+playlist_filter/oauth.json
+playlist_filter/downloads/
+playlist_filter/state.json
 data/
