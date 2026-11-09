@@ -2,8 +2,9 @@
 
 Same data, splits, architecture, optimizer, schedule and augmentation as the NumPy script,
 but the model runs on CUDA with cuDNN and gradients come from autograd.
-The exported JSON uses the same format, so cnn_genres_classifier.py
-(pure NumPy inference) can load it unchanged.
+Both scripts save models/cnn.json with the same structure, so it does not matter which one trained the model:
+cnn_genres_classifier.py (pure NumPy inference) loads it the same way. metadata.framework / metadata.device
+record how it was trained.
 """
 
 import argparse
@@ -33,6 +34,7 @@ from cnn_genres import (
     BN_MOMENTUM,
     CONV_FILTERS,
     DATA_PATH,
+    MODEL_PATH,
     DENSE_UNITS,
     DROPOUT,
     EARLY_STOPPING_PATIENCE,
@@ -63,7 +65,6 @@ from cnn_genres import (
     load_dataset,
 )
 
-MODEL_PATH = "models/cnn.json"
 GPU_EVAL_BATCH_SIZE = 256
 
 
@@ -334,7 +335,7 @@ def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
     model_spec = json.loads(
         json.dumps(
             {
-                "class": "torch CNN",
+                "class": "CNN",
                 "classes": classes,
                 "input": model_input,
                 "layers": export_layers(network, device),
@@ -382,7 +383,8 @@ def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
             "python_version": platform.python_version(),
             "sklearn_version": sklearn.__version__,
             "numpy_version": np.__version__,
-            "torch_version": torch.__version__,
+            "framework": "pytorch",
+            "framework_version": torch.__version__,
             "device": torch.cuda.get_device_name(device) if device.type == "cuda" else "cpu",
             "data_path": str(data_path),
             "data_sha256": data_sha256,
@@ -390,7 +392,6 @@ def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
             "data_songs": int(len(np.unique(song_ids))),
         },
         "config": {
-            "framework": "pytorch",
             "random_state": RANDOM_STATE,
             "holdout_fraction": HOLDOUT_FRACTION,
             "validation_fraction": VALIDATION_FRACTION,

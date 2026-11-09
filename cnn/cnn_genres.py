@@ -19,7 +19,7 @@ from sklearn.model_selection import StratifiedGroupKFold
 from sklearn.preprocessing import LabelEncoder
 
 DATA_PATH = "data/mel_spectrograms"
-MODEL_PATH = "models/cnn_numpy.json"
+MODEL_PATH = "models/cnn.json"  # same file for NumPy (CPU) and PyTorch (GPU) training
 CLASSIFIER_PATH = Path(__file__).resolve().parent / "cnn_genres_classifier.py"
 RANDOM_STATE = 42
 HOLDOUT_FRACTION = 0.2
@@ -485,12 +485,14 @@ def _augment(X, rng):
 
 
 def predict_proba(network, images, mean, std):
-    return np.concatenate(
+    proba = np.concatenate(
         [
             network.predict_proba(_normalize(images[start:start + EVAL_BATCH_SIZE], mean, std))
             for start in range(0, len(images), EVAL_BATCH_SIZE)
         ]
     ).astype(np.float64)
+    # Renormalize in float64 so each row sums to 1 at the precision sklearn checks.
+    return proba / proba.sum(axis=1, keepdims=True)
 
 
 def _split(y, groups, fraction, indices):
@@ -507,6 +509,7 @@ def _load_classifier_module():
 
 
 def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
+    print("Device: CPU (NumPy)", flush=True)
     rng = np.random.default_rng(RANDOM_STATE)
     images, filenames, labels, song_ids, data_sha256 = load_dataset(data_path)
 
@@ -604,7 +607,7 @@ def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
     model_spec = json.loads(
         json.dumps(
             {
-                "class": "numpy CNN",
+                "class": "CNN",
                 "classes": classes,
                 "input": model_input,
                 "layers": network.export(),
@@ -651,6 +654,9 @@ def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
             "python_version": platform.python_version(),
             "sklearn_version": sklearn.__version__,
             "numpy_version": np.__version__,
+            "framework": "numpy",
+            "framework_version": np.__version__,
+            "device": "cpu",
             "data_path": str(data_path),
             "data_sha256": data_sha256,
             "data_images": len(images),
