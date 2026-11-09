@@ -10,7 +10,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.figure import Figure
 from PIL import Image
 
-MODEL_RELATIVE_PATH = Path("models") / "convolutional_neural_network.json"
+MODEL_RELATIVE_PATH = Path("models") / "cnn.json"
 BATCH_SIZE = 16
 
 # Same configuration as data_generator/wav_to_mel_spectrograms.py.
@@ -36,7 +36,7 @@ IMAGE_HEIGHT = 288
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Classify the genre of an audio file with the convolutional neural network.")
+    parser = argparse.ArgumentParser(description="Classify the genre of an audio file with the CNN.")
     parser.add_argument("audio", type=Path, help="Path to the audio file")
     parser.add_argument("--model", type=Path, default=None, help=f"Model JSON (default: {MODEL_RELATIVE_PATH})")
     args = parser.parse_args()
@@ -44,7 +44,7 @@ def main():
         parser.error(f"audio file not found: {args.audio}")
     audio = args.audio
     spectrograms = audio_to_spectrograms(audio)
-    result = convolutional_neural_network_genre_classifier(spectrograms, args.model)
+    result = cnn_genre_classifier(spectrograms, args.model)
     print(f"Segments: {len(spectrograms)}")
     for genre, probability in result.items():
         print(f"{genre}: {probability:.4f}")
@@ -202,17 +202,19 @@ def predict_proba(spectrograms, model_path=None):
         forward(preprocess(images[start:start + BATCH_SIZE], model_input), layers)
         for start in range(0, len(images), BATCH_SIZE)
     ]
-    return classes, np.concatenate(proba).astype(np.float64)
+    proba = np.concatenate(proba).astype(np.float64)
+    # Renormalize in float64 so each row sums to 1 at float64 precision (the network computes in float32).
+    return classes, proba / proba.sum(axis=1, keepdims=True)
 
 
-def convolutional_neural_network_genre_classifier(spectrograms, model_path=None):
+def cnn_genre_classifier(spectrograms, model_path=None):
     classes, proba = predict_proba(spectrograms, model_path)
     genre_proba = proba.mean(axis=0)
     return dict(sorted(zip(classes, genre_proba.tolist()), key=lambda item: item[1], reverse=True))
 
 
 def audio_to_genre(audio_path, model_path=None):
-    return convolutional_neural_network_genre_classifier(audio_to_spectrograms(audio_path), model_path)
+    return cnn_genre_classifier(audio_to_spectrograms(audio_path), model_path)
 
 
 if __name__ == "__main__":

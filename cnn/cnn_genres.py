@@ -19,8 +19,8 @@ from sklearn.model_selection import StratifiedGroupKFold
 from sklearn.preprocessing import LabelEncoder
 
 DATA_PATH = "data/mel_spectrograms"
-MODEL_PATH = "models/convolutional_neural_network.json"
-CLASSIFIER_PATH = Path(__file__).resolve().parent / "convolutional_neural_network_genres_classifier.py"
+MODEL_PATH = "models/cnn_numpy.json"
+CLASSIFIER_PATH = Path(__file__).resolve().parent / "cnn_genres_classifier.py"
 RANDOM_STATE = 42
 HOLDOUT_FRACTION = 0.2
 VALIDATION_FRACTION = 0.15
@@ -67,7 +67,7 @@ def _json_default(obj):
 
 
 # Layers work in NHWC layout (batch, frequency, time, channels) during training.
-# They are exported in the NCHW layout used by convolutional_neural_network_genres_classifier.py.
+# They are exported in the NCHW layout used by cnn_genres_classifier.py.
 
 
 class Layer:
@@ -333,7 +333,7 @@ def softmax(logits):
     return exp / exp.sum(axis=1, keepdims=True)
 
 
-class ConvolutionalNeuralNetwork:
+class CNN:
     def __init__(self, n_classes, rng):
         self.layers = []
         channels, height, width = INPUT_CHANNELS, INPUT_HEIGHT, INPUT_WIDTH
@@ -500,7 +500,7 @@ def _split(y, groups, fraction, indices):
 
 
 def _load_classifier_module():
-    spec = importlib.util.spec_from_file_location("convolutional_neural_network_genres_classifier", CLASSIFIER_PATH)
+    spec = importlib.util.spec_from_file_location("cnn_genres_classifier", CLASSIFIER_PATH)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -518,7 +518,7 @@ def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
     train_idx, val_idx = _split(y, song_ids, VALIDATION_FRACTION, train_val_idx)
 
     mean, std = _channel_statistics(images[train_idx])
-    network = ConvolutionalNeuralNetwork(len(classes), rng)
+    network = CNN(len(classes), rng)
     optimizer = AdamW(network.layers, LEARNING_RATE)
 
     history = []
@@ -604,7 +604,7 @@ def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
     model_spec = json.loads(
         json.dumps(
             {
-                "class": "numpy ConvolutionalNeuralNetwork",
+                "class": "numpy CNN",
                 "classes": classes,
                 "input": model_input,
                 "layers": network.export(),

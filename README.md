@@ -1,6 +1,6 @@
 # Jazz-Inador
 
-Final data science project. It filters music in real time within a shared playback queue, classifying the genre of recommended songs with a Neural Network or Random Forest model. If a recommended song is not of the selected genre (JAZZ), it is not played and is skipped in the playback queue.
+Final data science project. It filters music in real time within a shared playback queue, classifying the genre of recommended songs with a CNN (convolutional neural network) or Random Forest model. If a recommended song is not of the selected genre (JAZZ), it is not played and is skipped in the playback queue.
 
 ### Data: 
 
@@ -41,10 +41,10 @@ uv run data_generator/validate_dataset.py
 ```bash
 # Train random forest
 uv run random_forest/random_forest_genres.py
-# Train convolutional neural network (NumPy, CPU)
-uv run convolutional_neural_network/convolutional_neural_network_genres.py
-# Train convolutional neural network (PyTorch, NVIDIA GPU with CUDA 13; needs uv sync --group gpu)
-uv run --group gpu convolutional_neural_network/convolutional_neural_network_genres_torch.py
+# Train CNN (NumPy, CPU)
+uv run cnn/cnn_genres.py
+# Train CNN (PyTorch, NVIDIA GPU with CUDA 13; needs uv sync --group gpu)
+uv run --group gpu cnn/cnn_genres_torch.py
 ```
 
 #### Classify audio files using each model
@@ -52,10 +52,10 @@ uv run --group gpu convolutional_neural_network/convolutional_neural_network_gen
 ```bash
 # Classify an audio file with the random forest:
 uv run random_forest/random_forest_genres_classifier.py <audio_file>
-# Classify an audio file with the convolutional neural network:
-uv run convolutional_neural_network/convolutional_neural_network_genres_classifier.py <audio_file>
-# Classify an audio file with the PyTorch-trained network:
-uv run convolutional_neural_network/convolutional_neural_network_genres_classifier.py <audio_file> --model models/convolutional_neural_network_torch.json
+# Classify an audio file with the CNN (models/cnn.json):
+uv run cnn/cnn_genres_classifier.py <audio_file>
+# Classify an audio file with the NumPy-trained CNN:
+uv run cnn/cnn_genres_classifier.py <audio_file> --model models/cnn_numpy.json
 ```
 
 ### Bibliography

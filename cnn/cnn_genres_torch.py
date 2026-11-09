@@ -1,8 +1,8 @@
-"""GPU (PyTorch) version of convolutional_neural_network_genres.py.
+"""GPU (PyTorch) version of cnn_genres.py.
 
 Same data, splits, architecture, optimizer, schedule and augmentation as the NumPy script,
 but the model runs on CUDA with cuDNN and gradients come from autograd.
-The exported JSON uses the same format, so convolutional_neural_network_genres_classifier.py
+The exported JSON uses the same format, so cnn_genres_classifier.py
 (pure NumPy inference) can load it unchanged.
 """
 
@@ -25,7 +25,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, log_loss, precisio
 from sklearn.preprocessing import LabelEncoder
 from torch import nn
 
-from convolutional_neural_network_genres import (
+from cnn_genres import (
     ADAM_BETAS,
     ADAM_EPS,
     BATCH_SIZE,
@@ -63,7 +63,7 @@ from convolutional_neural_network_genres import (
     load_dataset,
 )
 
-MODEL_PATH = "models/convolutional_neural_network_torch.json"
+MODEL_PATH = "models/cnn.json"
 GPU_EVAL_BATCH_SIZE = 256
 
 
@@ -334,7 +334,7 @@ def train(data_path=DATA_PATH, model_path=MODEL_PATH, epochs=EPOCHS):
     model_spec = json.loads(
         json.dumps(
             {
-                "class": "torch ConvolutionalNeuralNetwork",
+                "class": "torch CNN",
                 "classes": classes,
                 "input": model_input,
                 "layers": export_layers(network, device),
