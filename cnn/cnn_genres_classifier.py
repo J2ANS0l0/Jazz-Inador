@@ -77,13 +77,19 @@ def _render_spectrogram(segment, sr):
 
 def audio_to_spectrograms(audio_path, max_seconds=None):
     # max_seconds: only analyze the start of the audio (None = the whole file).
-    y, sr = librosa.load(Path(audio_path), sr=SAMPLE_RATE, mono=True, duration=max_seconds)
-    segment_length = SEGMENT_SECONDS * sr
+    y, _ = librosa.load(Path(audio_path), sr=SAMPLE_RATE, mono=True, duration=max_seconds)
+    return samples_to_spectrograms(y)
+
+
+def samples_to_spectrograms(y):
+    # y: mono float samples at SAMPLE_RATE. Cut into SEGMENT_SECONDS segments (a shorter tail is dropped,
+    # audio shorter than one segment is zero-padded) and render one spectrogram per segment.
+    segment_length = SEGMENT_SECONDS * SAMPLE_RATE
     segment_count = max(1, len(y) // segment_length)
     y = librosa.util.fix_length(y, size=segment_count * segment_length)
     return np.stack(
         [
-            _render_spectrogram(y[fragment * segment_length:(fragment + 1) * segment_length], sr)
+            _render_spectrogram(y[fragment * segment_length:(fragment + 1) * segment_length], SAMPLE_RATE)
             for fragment in range(segment_count)
         ]
     )
