@@ -23,6 +23,9 @@ Final data science project. It filters music in real time within a shared playba
 
 ```bash
 uv sync
+# Optional: also install PyTorch (CUDA) to train the CNN on an NVIDIA GPU.
+# Not needed to use the trained models.
+uv sync --group gpu
 ```
 #### Generate data
 
@@ -40,8 +43,8 @@ uv run data_generator/validate_dataset.py
 uv run random_forest/random_forest_genres.py
 # Train convolutional neural network (NumPy, CPU)
 uv run convolutional_neural_network/convolutional_neural_network_genres.py
-# Train convolutional neural network (PyTorch, NVIDIA GPU with CUDA 13)
-uv run convolutional_neural_network/convolutional_neural_network_genres_torch.py
+# Train convolutional neural network (PyTorch, NVIDIA GPU with CUDA 13; needs uv sync --group gpu)
+uv run --group gpu convolutional_neural_network/convolutional_neural_network_genres_torch.py
 ```
 
 #### Classify audio files using each model

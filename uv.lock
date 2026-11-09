@@ -595,12 +595,14 @@ dependencies = [
     { name = "pillow" },
     { name = "scikit-learn" },
     { name = "soundfile" },
-    { name = "torch" },
 ]
 
 [package.dev-dependencies]
 dev = [
     { name = "ipykernel" },
+]
+gpu = [
+    { name = "torch" },
 ]
 
 [package.metadata]
@@ -612,11 +614,11 @@ requires-dist = [
     { name = "pillow", specifier = ">=13.0.0" },
     { name = "scikit-learn", specifier = ">=1.9.1" },
     { name = "soundfile", specifier = ">=0.14.0" },
-    { name = "torch", specifier = ">=2.14.1", index = "https://download.pytorch.org/whl/cu130" },
 ]
 
 [package.metadata.requires-dev]
 dev = [{ name = "ipykernel", specifier = ">=7.4.0" }]
+gpu = [{ name = "torch", specifier = ">=2.14.1", index = "https://download.pytorch.org/whl/cu130" }]
 
 [[package]]
 name = "jedi"

@@ -10,7 +10,6 @@ dependencies = [
     "pillow>=13.0.0",
     "scikit-learn>=1.9.1",
     "soundfile>=0.14.0",
-    "torch>=2.14.1",
 ]
 
 # CUDA 13.0 build of PyTorch (GPU training for the convolutional neural network).
@@ -25,4 +24,8 @@ torch = [{ index = "pytorch-cu130" }]
 [dependency-groups]
 dev = [
     "ipykernel>=7.4.0",
+]
+# Optional: only needed to train the CNN on an NVIDIA GPU (uv sync --group gpu).
+gpu = [
+    "torch>=2.14.1",
 ]
