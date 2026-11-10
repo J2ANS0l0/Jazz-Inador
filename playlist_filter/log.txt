@@ -1,2 +1,167 @@
 2026-11-09 00:42:42 | INFO | Started | playlist PLR2w2VNjsTrs | model cnn.json | every 30s | DRY RUN
 2026-11-09 00:42:43 | INFO | Stopped
+2026-11-09 16:46:57 | INFO | Started | playlist PLR2w2VNjsTrs | model cnn.json | every 5s | 4 workers
+2026-11-09 16:46:57 | INFO | 30 new song(s) in "JAM" (30 in total)
+2026-11-09 16:47:09 | INFO | KEEP   "Take Five" by The Dave Brubeck Quartet (ryA6eHZNnXY) | jazz 56%, rock 11%, hiphop 9% | 30 segments | 12s
+2026-11-09 16:47:11 | INFO | KEEP   "Whiplash" by Hank Levy (-jAtHf9RA4w) | jazz 40%, reggae 19%, blues 18% | 30 segments | 14s
+2026-11-09 16:47:13 | INFO | KEEP   "Cat" by C418 (GaGfUbgLyCE) | jazz 45%, classical 31%, blues 12% | 30 segments | 16s
+2026-11-09 16:47:15 | INFO | KEEP   "Cantina Band" by John Williams, London Symphony Orchestra (EsvfptdFXf4) | jazz 28%, country 16%, classical 15% | 30 segments | 18s
+2026-11-09 16:47:20 | INFO | KEEP   "Dog" by C418 (srYRe34pg_s) | jazz 26%, hiphop 17%, reggae 17% | 30 segments | 11s
+2026-11-09 16:47:22 | INFO | KEEP   "jazz is for ordinary people" by berlioz (MCXQzX5H7SE) | jazz 37%, blues 20%, reggae 11% | 30 segments | 11s
+2026-11-09 16:47:24 | INFO | REMOVE "Key" by C418 (-CKR-McWeYk) | classical 62%, jazz 13%, blues 8% | 21 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:28 | INFO | REMOVE "Door" by C418 (oF5MfzRJ8dg) | classical 47%, jazz 26%, pop 15% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:32 | INFO | REMOVE "Subwoofer Lullaby" by C418 (lXoVugTertI) | classical 29%, country 18%, jazz 18% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:33 | INFO | REMOVE "Death" by C418 (aFm67UOJ1V8) | blues 27%, jazz 13%, hiphop 11% | 13 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:35 | INFO | REMOVE "Living Mice" by C418 (SF0SohPjmiU) | classical 53%, rock 15%, country 12% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:38 | INFO | REMOVE "Moog City" by C418 (oqU153M-o1k) | classical 43%, jazz 18%, country 12% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:44 | INFO | REMOVE "Haggstrom" by C418 (X9oPIMxTY5w) | classical 69%, jazz 23%, pop 3% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:46 | INFO | REMOVE "Minecraft" by C418 (2S54N2mFV_A) | classical 82%, jazz 7%, rock 3% | 30 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:47 | INFO | REMOVE "Oxygène" by C418 (t1o1P0tHKTc) | classical 75%, country 7%, jazz 7% | 21 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:50 | INFO | REMOVE "Équinoxe" by C418 (VkynjYWG9ac) | classical 37%, country 18%, jazz 16% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:54 | INFO | REMOVE "Mice on Venus" by C418 (eMGRt0A9Yns) | classical 41%, jazz 19%, pop 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:57 | INFO | REMOVE "Dry Hands" by C418 (2j8im-7KS9Y) | classical 41%, jazz 40%, blues 7% | 22 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:47:59 | INFO | REMOVE "Wet Hands" by C418 (lq1vZxM-Iic) | classical 47%, jazz 38%, blues 4% | 29 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:01 | INFO | REMOVE "Clark" by C418 (-xQ69rFE15Y) | classical 64%, jazz 9%, country 8% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:05 | INFO | REMOVE "Chris" by C418 (CF_RobqAGWk) | classical 39%, jazz 14%, pop 12% | 29 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:09 | INFO | REMOVE "Thirteen" by C418 (c48_L4K1wPU) | classical 56%, jazz 14%, pop 12% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:11 | INFO | REMOVE "Excuse" by C418 (qmFedaouEK4) | classical 26%, blues 22%, jazz 16% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:13 | INFO | REMOVE "Sweden" by C418 (5w3rRFWzjcM) | classical 71%, jazz 10%, country 9% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:17 | INFO | REMOVE "Danny" by C418 (Hm7QRNlcD9Y) | classical 32%, jazz 20%, country 17% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:20 | INFO | REMOVE "Beginning" by C418 (ZVwZ8-D8rII) | classical 75%, jazz 20%, rock 2% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:23 | INFO | REMOVE "Droopy Likes Ricochet" by C418 (f8NsSxp5vtk) | classical 57%, jazz 14%, rock 10% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:25 | INFO | REMOVE "Droopy Likes Your Face" by C418 (fBvwipWtHoU) | rock 25%, country 18%, blues 14% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:29 | INFO | REMOVE "Die With A Smile" by Lady Gaga, Bruno Mars (RVDCeVG90Rg) | country 23%, rock 22%, disco 21% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:48:31 | INFO | KEEP   "The History Of John Coltrane: Giant Steps" by John Coltrane (jYO3pD95zyw) | jazz 95%, classical 3%, reggae 1% | 30 segments | 12s
+2026-11-09 16:49:42 | INFO | 24 new song(s) in "JAM" (31 in total)
+2026-11-09 16:49:54 | INFO | REMOVE "Door" by C418 (oF5MfzRJ8dg) | classical 47%, jazz 26%, pop 15% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:49:55 | INFO | REMOVE "Death" by C418 (aFm67UOJ1V8) | blues 27%, jazz 13%, hiphop 11% | 13 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:49:56 | INFO | REMOVE "Key" by C418 (-CKR-McWeYk) | classical 62%, jazz 13%, blues 8% | 21 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:49:59 | INFO | REMOVE "Subwoofer Lullaby" by C418 (lXoVugTertI) | classical 29%, country 18%, jazz 18% | 30 segments | 16s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:06 | INFO | REMOVE "Moog City" by C418 (oqU153M-o1k) | classical 43%, jazz 18%, country 12% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:08 | INFO | REMOVE "Living Mice" by C418 (SF0SohPjmiU) | classical 53%, rock 15%, country 12% | 30 segments | 14s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:10 | INFO | REMOVE "Haggstrom" by C418 (X9oPIMxTY5w) | classical 69%, jazz 23%, pop 3% | 30 segments | 14s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:12 | INFO | REMOVE "Minecraft" by C418 (2S54N2mFV_A) | classical 82%, jazz 7%, rock 3% | 30 segments | 14s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:16 | INFO | REMOVE "Oxygène" by C418 (t1o1P0tHKTc) | classical 75%, country 7%, jazz 7% | 21 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:18 | INFO | REMOVE "Équinoxe" by C418 (VkynjYWG9ac) | classical 37%, country 18%, jazz 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:21 | INFO | REMOVE "Mice on Venus" by C418 (eMGRt0A9Yns) | classical 41%, jazz 19%, pop 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:23 | INFO | REMOVE "Dry Hands" by C418 (2j8im-7KS9Y) | classical 41%, jazz 40%, blues 7% | 22 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:26 | INFO | REMOVE "Wet Hands" by C418 (lq1vZxM-Iic) | classical 47%, jazz 38%, blues 4% | 29 segments | 9s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:30 | INFO | REMOVE "Clark" by C418 (-xQ69rFE15Y) | classical 64%, jazz 9%, country 8% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:33 | INFO | REMOVE "Chris" by C418 (CF_RobqAGWk) | classical 39%, jazz 14%, pop 12% | 29 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:35 | INFO | REMOVE "Thirteen" by C418 (c48_L4K1wPU) | classical 56%, jazz 14%, pop 12% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:37 | INFO | REMOVE "Excuse" by C418 (qmFedaouEK4) | classical 26%, blues 22%, jazz 16% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:40 | INFO | REMOVE "Sweden" by C418 (5w3rRFWzjcM) | classical 71%, jazz 10%, country 9% | 30 segments | 9s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:44 | INFO | KEEP   "Cat" by C418 (GaGfUbgLyCE) | jazz 45%, classical 31%, blues 12% | 30 segments | 12s
+2026-11-09 16:50:47 | INFO | KEEP   "Dog" by C418 (srYRe34pg_s) | jazz 26%, hiphop 17%, reggae 17% | 30 segments | 12s
+2026-11-09 16:50:49 | INFO | REMOVE "Danny" by C418 (Hm7QRNlcD9Y) | classical 32%, jazz 20%, country 17% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:52 | INFO | REMOVE "Beginning" by C418 (ZVwZ8-D8rII) | classical 75%, jazz 20%, rock 2% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:55 | INFO | REMOVE "Droopy Likes Ricochet" by C418 (f8NsSxp5vtk) | classical 57%, jazz 14%, rock 10% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:50:59 | INFO | REMOVE "Droopy Likes Your Face" by C418 (fBvwipWtHoU) | rock 25%, country 18%, blues 14% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:13 | INFO | 24 new song(s) in "JAM" (29 in total)
+2026-11-09 16:53:24 | INFO | REMOVE "Subwoofer Lullaby" by C418 (lXoVugTertI) | classical 29%, country 18%, jazz 18% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:25 | INFO | REMOVE "Death" by C418 (aFm67UOJ1V8) | blues 27%, jazz 13%, hiphop 11% | 13 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:26 | INFO | REMOVE "Key" by C418 (-CKR-McWeYk) | classical 62%, jazz 13%, blues 8% | 21 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:29 | INFO | REMOVE "Door" by C418 (oF5MfzRJ8dg) | classical 47%, jazz 26%, pop 15% | 30 segments | 15s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:33 | INFO | REMOVE "Living Mice" by C418 (SF0SohPjmiU) | classical 53%, rock 15%, country 12% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:35 | INFO | REMOVE "Moog City" by C418 (oqU153M-o1k) | classical 43%, jazz 18%, country 12% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:38 | INFO | REMOVE "Haggstrom" by C418 (X9oPIMxTY5w) | classical 69%, jazz 23%, pop 3% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:40 | INFO | REMOVE "Minecraft" by C418 (2S54N2mFV_A) | classical 82%, jazz 7%, rock 3% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:43 | INFO | REMOVE "Oxygène" by C418 (t1o1P0tHKTc) | classical 75%, country 7%, jazz 7% | 21 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:46 | INFO | REMOVE "Équinoxe" by C418 (VkynjYWG9ac) | classical 37%, country 18%, jazz 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:48 | INFO | REMOVE "Mice on Venus" by C418 (eMGRt0A9Yns) | classical 41%, jazz 19%, pop 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:51 | INFO | REMOVE "Dry Hands" by C418 (2j8im-7KS9Y) | classical 41%, jazz 40%, blues 7% | 22 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:55 | INFO | REMOVE "Wet Hands" by C418 (lq1vZxM-Iic) | classical 47%, jazz 38%, blues 4% | 29 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:53:57 | INFO | REMOVE "Clark" by C418 (-xQ69rFE15Y) | classical 64%, jazz 9%, country 8% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:54:00 | INFO | REMOVE "Chris" by C418 (CF_RobqAGWk) | classical 39%, jazz 14%, pop 12% | 29 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:54:02 | INFO | REMOVE "Thirteen" by C418 (c48_L4K1wPU) | classical 56%, jazz 14%, pop 12% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:54:07 | INFO | REMOVE "Excuse" by C418 (qmFedaouEK4) | classical 26%, blues 22%, jazz 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:54:09 | INFO | REMOVE "Sweden" by C418 (5w3rRFWzjcM) | classical 71%, jazz 10%, country 9% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:54:12 | INFO | KEEP   "Cat" by C418 (GaGfUbgLyCE) | jazz 45%, classical 31%, blues 12% | 30 segments | 12s
+2026-11-09 16:54:14 | INFO | KEEP   "Dog" by C418 (srYRe34pg_s) | jazz 26%, hiphop 17%, reggae 17% | 30 segments | 12s
+2026-11-09 16:54:17 | INFO | REMOVE "Danny" by C418 (Hm7QRNlcD9Y) | classical 32%, jazz 20%, country 17% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:54:22 | INFO | REMOVE "Beginning" by C418 (ZVwZ8-D8rII) | classical 75%, jazz 20%, rock 2% | 30 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:54:24 | INFO | REMOVE "Droopy Likes Ricochet" by C418 (f8NsSxp5vtk) | classical 57%, jazz 14%, rock 10% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:54:26 | INFO | REMOVE "Droopy Likes Your Face" by C418 (fBvwipWtHoU) | rock 25%, country 18%, blues 14% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:16 | INFO | 12 new song(s) in "JAM" (17 in total)
+2026-11-09 16:57:27 | INFO | 1 new song(s) in "JAM" (18 in total)
+2026-11-09 16:57:27 | INFO | REMOVE "Please Please Please" by Sabrina Carpenter (62yox0F5lcA) | reggae 25%, country 19%, pop 15% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:29 | INFO | REMOVE "Taste" by Sabrina Carpenter (-5GI38vWew8) | disco 36%, pop 24%, hiphop 12% | 30 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:31 | INFO | REMOVE "Sharpest Tool" by Sabrina Carpenter (E1nfzjLEatA) | reggae 29%, pop 23%, country 12% | 30 segments | 15s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:34 | INFO | REMOVE "Good Graces" by Sabrina Carpenter (Fq_LG6SPSFU) | pop 42%, disco 24%, hiphop 17% | 30 segments | 17s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:38 | INFO | REMOVE "Coincidence" by Sabrina Carpenter (gmxJpN4hCPw) | pop 24%, disco 18%, rock 14% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:40 | INFO | REMOVE "Bed Chem" by Sabrina Carpenter (UUNF1HM4EsE) | pop 44%, disco 24%, reggae 15% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:43 | INFO | REMOVE "Espresso" by Sabrina Carpenter (kIft-LUHHVA) | disco 42%, pop 27%, hiphop 16% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:46 | INFO | REMOVE "Slim Pickins" by Sabrina Carpenter (XRAAHNctZ3E) | reggae 27%, country 24%, blues 19% | 30 segments | 8s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:48 | INFO | REMOVE "Dumb & Poetic" by Sabrina Carpenter (In80P02OHDc) | country 28%, rock 23%, blues 13% | 30 segments | 14s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:51 | INFO | REMOVE "Juno" by Sabrina Carpenter (j360s9CtZTs) | disco 24%, pop 23%, hiphop 14% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:55 | INFO | REMOVE "Lie To Girls" by Sabrina Carpenter (LrVroBEWmCY) | reggae 22%, country 19%, pop 16% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:57 | INFO | REMOVE "Don’t Smile" by Sabrina Carpenter (zDHJ6nMG2BA) | pop 25%, reggae 20%, hiphop 17% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:57:59 | INFO | KEEP   "jazz is for ordinary people" by berlioz (CJkGGslFneE) | jazz 36%, blues 20%, reggae 11% | 30 segments | 12s
+2026-11-09 16:58:25 | INFO | Stopped
+2026-11-09 16:59:36 | INFO | Started | playlist PLR2w2VNjsTrs | model cnn.json | every 5s | 4 workers
+2026-11-09 16:59:36 | INFO | 13 new song(s) in "JAM" (17 in total)
+2026-11-09 16:59:48 | INFO | REMOVE "Please Please Please" by Sabrina Carpenter (62yox0F5lcA) | reggae 25%, country 19%, pop 15% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:59:50 | INFO | REMOVE "Taste" by Sabrina Carpenter (-5GI38vWew8) | disco 36%, pop 24%, hiphop 12% | 30 segments | 14s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:59:53 | INFO | REMOVE "Good Graces" by Sabrina Carpenter (Fq_LG6SPSFU) | pop 42%, disco 24%, hiphop 17% | 30 segments | 16s | YouTube: STATUS_SUCCEEDED
+2026-11-09 16:59:55 | INFO | REMOVE "Sharpest Tool" by Sabrina Carpenter (E1nfzjLEatA) | reggae 29%, pop 23%, country 12% | 30 segments | 19s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:00 | INFO | REMOVE "Bed Chem" by Sabrina Carpenter (UUNF1HM4EsE) | pop 44%, disco 24%, reggae 15% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:02 | INFO | REMOVE "Coincidence" by Sabrina Carpenter (gmxJpN4hCPw) | pop 24%, disco 18%, rock 14% | 30 segments | 14s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:06 | INFO | REMOVE "Espresso" by Sabrina Carpenter (kIft-LUHHVA) | disco 42%, pop 27%, hiphop 16% | 30 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:08 | INFO | REMOVE "Dumb & Poetic" by Sabrina Carpenter (In80P02OHDc) | country 28%, rock 23%, blues 13% | 30 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:11 | INFO | REMOVE "Slim Pickins" by Sabrina Carpenter (XRAAHNctZ3E) | reggae 27%, country 24%, blues 19% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:13 | INFO | REMOVE "Juno" by Sabrina Carpenter (j360s9CtZTs) | disco 24%, pop 23%, hiphop 14% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:17 | INFO | REMOVE "Lie To Girls" by Sabrina Carpenter (LrVroBEWmCY) | reggae 22%, country 19%, pop 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:20 | INFO | REMOVE "Don’t Smile" by Sabrina Carpenter (zDHJ6nMG2BA) | pop 25%, reggae 20%, hiphop 17% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:00:22 | INFO | KEEP   "Caravan" by John Wasson (38CRu1rCaKg) | jazz 23%, rock 15%, metal 14% | 30 segments | 11s
+2026-11-09 17:00:54 | INFO | Stopped
+2026-11-09 17:03:51 | INFO | Started | playlist PLR2w2VNjsTrs | model cnn.json | every 5s | 4 workers
+2026-11-09 17:03:52 | INFO | 12 new song(s) in "JAM" (17 in total)
+2026-11-09 17:04:04 | INFO | REMOVE "drivers license" by Olivia Rodrigo (l0txe6yk8Kc) | pop 20%, country 13%, reggae 12% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:06 | INFO | REMOVE "1 step forward, 3 steps back" by Olivia Rodrigo (jfrZS4-yBuI) | blues 27%, country 22%, reggae 17% | 30 segments | 14s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:09 | INFO | REMOVE "traitor" by Olivia Rodrigo (4QLvEIXlF6Q) | reggae 23%, country 20%, pop 17% | 30 segments | 16s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:11 | INFO | REMOVE "brutal" by Olivia Rodrigo (QRxEubhdTQ0) | reggae 24%, rock 18%, hiphop 14% | 30 segments | 18s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:14 | INFO | REMOVE "deja vu" by Olivia Rodrigo (pHw5jgsE_pY) | pop 25%, disco 16%, hiphop 12% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:17 | INFO | REMOVE "good 4 u" by Olivia Rodrigo (Bc9ijogGmtU) | reggae 19%, disco 18%, hiphop 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:20 | INFO | REMOVE "enough for you" by Olivia Rodrigo (PtjVwGdIHhA) | country 27%, reggae 22%, blues 14% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:23 | INFO | REMOVE "happier" by Olivia Rodrigo (GBFWUR8XttQ) | pop 30%, reggae 20%, disco 19% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:25 | INFO | REMOVE "jealousy, jealousy" by Olivia Rodrigo (AuEQC1siVS8) | reggae 30%, pop 20%, hiphop 19% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:28 | INFO | REMOVE "favorite crime" by Olivia Rodrigo (0aiJ7qzlZBI) | country 29%, classical 21%, blues 18% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:31 | INFO | REMOVE "hope ur ok" by Olivia Rodrigo (EeFNmZttFvA) | country 32%, rock 18%, blues 12% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:04:33 | INFO | KEEP   "jazz is for ordinary people" by berlioz (MCXQzX5H7SE) | jazz 37%, blues 20%, reggae 11% | 30 segments | 10s
+2026-11-09 17:06:10 | INFO | 1 new song(s) in "JAM" (6 in total)
+2026-11-09 17:06:16 | INFO | Stopped
+2026-11-09 17:07:04 | INFO | Started | playlist PLR2w2VNjsTrs | model cnn.json | every 5s | 4 workers
+2026-11-09 17:07:04 | INFO | 13 new song(s) in "JAM" (17 in total)
+2026-11-09 17:07:45 | ERROR | Playlist check failed: ReadTimeout: HTTPSConnectionPool(host='music.youtube.com', port=443): Read timed out. (read timeout=30)
+2026-11-09 17:07:45 | INFO | KEEP   "Whiplash" by Hank Levy (-jAtHf9RA4w) | jazz 40%, reggae 19%, blues 18% | 30 segments | 15s
+2026-11-09 17:07:45 | INFO | REMOVE "brutal" by Olivia Rodrigo (QRxEubhdTQ0) | reggae 24%, rock 18%, hiphop 14% | 30 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:45 | INFO | REMOVE "traitor" by Olivia Rodrigo (4QLvEIXlF6Q) | reggae 23%, country 20%, pop 17% | 30 segments | 19s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:46 | INFO | REMOVE "drivers license" by Olivia Rodrigo (l0txe6yk8Kc) | pop 20%, country 13%, reggae 12% | 30 segments | 17s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:46 | INFO | REMOVE "1 step forward, 3 steps back" by Olivia Rodrigo (jfrZS4-yBuI) | blues 27%, country 22%, reggae 17% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:47 | INFO | REMOVE "deja vu" by Olivia Rodrigo (pHw5jgsE_pY) | pop 25%, disco 16%, hiphop 12% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:47 | INFO | REMOVE "good 4 u" by Olivia Rodrigo (Bc9ijogGmtU) | reggae 19%, disco 18%, hiphop 16% | 30 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:47 | INFO | REMOVE "enough for you" by Olivia Rodrigo (PtjVwGdIHhA) | country 27%, reggae 22%, blues 14% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:48 | INFO | REMOVE "happier" by Olivia Rodrigo (GBFWUR8XttQ) | pop 30%, reggae 20%, disco 19% | 30 segments | 13s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:48 | INFO | REMOVE "jealousy, jealousy" by Olivia Rodrigo (AuEQC1siVS8) | reggae 30%, pop 20%, hiphop 19% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:48 | INFO | REMOVE "favorite crime" by Olivia Rodrigo (0aiJ7qzlZBI) | country 29%, classical 21%, blues 18% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:49 | INFO | REMOVE "hope ur ok" by Olivia Rodrigo (EeFNmZttFvA) | country 32%, rock 18%, blues 12% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:07:51 | INFO | KEEP   "jazz is for ordinary people" by berlioz (MCXQzX5H7SE) | jazz 37%, blues 20%, reggae 11% | 30 segments | 12s
+2026-11-09 17:11:43 | INFO | 1 new song(s) in "JAM" (7 in total)
+2026-11-09 17:11:54 | INFO | KEEP   "autumn leaves" by Julius Pythoneus (nGZ-UqVTxdg) | jazz 46%, classical 31%, country 13% | 30 segments | 11s
+2026-11-09 17:12:41 | INFO | 1 new song(s) in "JAM" (8 in total)
+2026-11-09 17:12:52 | INFO | REMOVE "City Of Stars (From "La La Land" Soundtrack)" by Ryan Gosling, Emma Stone (xkqfm3muuhM) | country 27%, classical 18%, blues 15% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:13:28 | INFO | 1 new song(s) in "JAM" (8 in total)
+2026-11-09 17:13:39 | INFO | KEEP   "deep in it" by berlioz, Ted Jasper (kBbnPzFcty8) | jazz 34%, blues 19%, classical 15% | 24 segments | 11s
+2026-11-09 17:14:32 | INFO | 11 new song(s) in "JAM" (18 in total)
+2026-11-09 17:14:42 | INFO | REMOVE "brutal" by Olivia Rodrigo (QRxEubhdTQ0) | reggae 24%, rock 18%, hiphop 14% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:14:44 | INFO | REMOVE "1 step forward, 3 steps back" by Olivia Rodrigo (jfrZS4-yBuI) | blues 27%, country 22%, reggae 17% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:14:46 | INFO | REMOVE "drivers license" by Olivia Rodrigo (l0txe6yk8Kc) | pop 20%, country 13%, reggae 12% | 30 segments | 14s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:14:48 | INFO | REMOVE "traitor" by Olivia Rodrigo (4QLvEIXlF6Q) | reggae 23%, country 20%, pop 17% | 30 segments | 16s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:14:52 | INFO | REMOVE "deja vu" by Olivia Rodrigo (pHw5jgsE_pY) | pop 25%, disco 16%, hiphop 12% | 30 segments | 10s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:14:55 | INFO | REMOVE "good 4 u" by Olivia Rodrigo (Bc9ijogGmtU) | reggae 19%, disco 18%, hiphop 16% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:14:57 | INFO | REMOVE "enough for you" by Olivia Rodrigo (PtjVwGdIHhA) | country 27%, reggae 22%, blues 14% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:15:00 | INFO | REMOVE "happier" by Olivia Rodrigo (GBFWUR8XttQ) | pop 30%, reggae 20%, disco 19% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:15:03 | INFO | REMOVE "jealousy, jealousy" by Olivia Rodrigo (AuEQC1siVS8) | reggae 30%, pop 20%, hiphop 19% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:15:06 | INFO | REMOVE "favorite crime" by Olivia Rodrigo (0aiJ7qzlZBI) | country 29%, classical 21%, blues 18% | 30 segments | 11s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:15:09 | INFO | REMOVE "hope ur ok" by Olivia Rodrigo (EeFNmZttFvA) | country 32%, rock 18%, blues 12% | 30 segments | 12s | YouTube: STATUS_SUCCEEDED
+2026-11-09 17:19:32 | INFO | Stopped
